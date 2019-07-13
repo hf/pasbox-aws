@@ -76,7 +76,7 @@ def generate(template):
 
 def pre_deploy(_args):
     for command in [
-            "./gradlew apidevices:androidregister:build"
+        "./gradlew apidevices:androidregister:build"
     ]:
         path = os.path.join(os.path.relpath(os.path.dirname(__file__)), "..", "..")
         print(">>> run '" + command + "' in '" + path + "'")
@@ -96,7 +96,8 @@ def deploy(args):
 
     artifact = open(
         os.path.relpath(
-            os.path.join(os.path.dirname(__file__), "build", "distributions", "androidregister-1.0-SNAPSHOT.zip")), "rb")
+            os.path.join(os.path.dirname(__file__), "build", "distributions", "androidregister-1.0-SNAPSHOT.zip")),
+        "rb")
     artifact_object = s3_client.put_object(
         Bucket=bucket, Key=key, Body=artifact)
     artifact.close()

@@ -49,7 +49,9 @@ class UpdateItemDSL(val table: String) {
         expressionAttributeNames["#rep_${it.first}"] = it.first
         expressionAttributeValues[":rep_${it.first}"] = it.second
 
-        if (expression.length > 4) { expression.append(" ,") }
+        if (expression.length > 4) {
+          expression.append(" ,")
+        }
         expression.append("#rep_").append(it.first).append(" = :rep_").append(it.first)
       }
     }
@@ -59,7 +61,9 @@ class UpdateItemDSL(val table: String) {
       expressionAttributeNames["#nexv_${with.first}"] = with.first
       expressionAttributeValues["#nexv_${with.first}"] = with.second
 
-      if (expression.length > 4) { expression.append(" ,") }
+      if (expression.length > 4) {
+        expression.append(" ,")
+      }
       expression.append("#nexr_").append(replace).append(" = if_not_exists(#nexv_").append(with.first).append(", :nexv_").append(with.first).append(")")
     }
   }
@@ -84,9 +88,11 @@ class UpdateItemDSL(val table: String) {
     returnValues = "ALL_NEW"
   }
 
-  fun key(vararg pairs: Pair<String, AttributeValue>) {
-    pairs.forEach {
-      key[it.first] = it.second
+  fun key(hash: Pair<String, AttributeValue>, range: Pair<String, AttributeValue>? = null) {
+    key[hash.first] = hash.second
+
+    if (null != range) {
+      key[range.first] = range.second
     }
   }
 

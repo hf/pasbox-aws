@@ -364,14 +364,11 @@ class AndroidRegister(
       ),
 
       dynamoDB.updateItem("Devices") {
-        key(
-          "key" dynamo "registration/${identity.second.toHex()}",
-          "type" dynamo "android"
-        )
+        key("key" dynamo "registration/android/${identity.second.toHex()}")
 
         set {
           assign(
-            "identity" dynamo identity.second.toHex(),
+            "identity" dynamo identity.second,
             "identityKey" dynamo identityKey.encoded,
             "safetyNet" dynamo request.safetyNet.original,
             "deviceCertificate" dynamo request.deviceCertificate,
@@ -386,14 +383,11 @@ class AndroidRegister(
       },
 
       dynamoDB.updateItem("Devices") {
-        key(
-          "key" dynamo "token/${request.token}",
-          "type" dynamo "fcm"
-        )
+        key("key" dynamo "token/fcm/${request.token}")
 
         set {
           assign(
-            "identity" dynamo identity.second.toHex(),
+            "identity" dynamo identity.second,
             "identityKey" dynamo identityKey.encoded,
             "safetyNet" dynamo request.safetyNet.original,
             "deviceCertificate" dynamo request.deviceCertificate,

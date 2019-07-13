@@ -1,15 +1,8 @@
-import boto3
-import os.path
-import subprocess
-
-import awacs
 import awacs.sts
-
-from troposphere import Template, Output, Export, ImportValue, Ref, Sub, GetAtt
-from troposphere import apigateway, awslambda, iam, dynamodb
-
-from apidevices import authorizer
 from apidevices import androidregister
+from apidevices import authorizer
+from troposphere import Template, Output, Export, Ref, Sub, GetAtt
+from troposphere import apigateway, awslambda, iam, dynamodb
 
 
 def lambda_invocation_arn(lambda_resource):
@@ -38,13 +31,10 @@ devices_table = template.add_resource(
         TableName='Devices',
         KeySchema=[
             dynamodb.KeySchema(AttributeName='key', KeyType='HASH'),
-            dynamodb.KeySchema(AttributeName='type', KeyType='RANGE'),
         ],
         AttributeDefinitions=[
             dynamodb.AttributeDefinition(
                 AttributeName='key', AttributeType='S'),
-            dynamodb.AttributeDefinition(
-                AttributeName='type', AttributeType='S'),
         ],
         BillingMode='PAY_PER_REQUEST',
     ))
