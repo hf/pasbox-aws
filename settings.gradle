@@ -1,0 +1,4 @@
+rootProject.name = 'pasbox-aws'
+include 'apidevices'
+include 'apidevices:common'
+include 'apidevices:androidregister'

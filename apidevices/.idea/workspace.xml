@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="69f3dc28-fb4e-4155-8d98-62d1829299bb" name="Default Changelist" comment="Rename package to dev.pasbox, per pasbox.dev hostname">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/androidregister/apidevices.androidregister.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/apidevices.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/DeviceRegistrationMessage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/dynamodb/Attributes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/data/Hex.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/androidregister/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/androidregister/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/androidregister/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/androidregister/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/androidregister/build/generated/source/kaptKotlin/main/dev/pasbox/apidevices/androidregister/Response_ResultJsonAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/androidregister/build/generated/source/kaptKotlin/main/dev/pasbox/apidevices/androidregister/Response_ResultJsonAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/AndroidRegister.kt" beforeDir="false" afterPath="$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/AndroidRegister.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/androidregister/.gradle/" />
+    <ignored path="$PROJECT_DIR$/androidregister/build/" />
+    <ignored path="$PROJECT_DIR$/common/.gradle/" />
+    <ignored path="$PROJECT_DIR$/common/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="apidevices" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="apidevices" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="apidevices" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="apidevices" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="apidevices" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="apidevices" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/AndroidRegister.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/RequestResponse.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/dynamodb/Attributes.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="960">
+              <caret line="84" column="2" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/DeviceRegistrationMessage.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
+              <folding>
+                <element signature="e#47#107#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/androidregister/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1056">
+              <caret line="50" column="107" selection-start-line="50" selection-start-column="107" selection-end-line="50" selection-end-column="107" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/sns/2.5.29/3a771b485d6c23886599fd71838c258c9f747145/sns-2.5.29-sources.jar!/software/amazon/awssdk/services/sns/model/PublishRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20040">
+              <caret line="889" column="65" selection-start-line="889" selection-start-column="65" selection-end-line="889" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/sns/2.5.29/3a771b485d6c23886599fd71838c258c9f747145/sns-2.5.29-sources.jar!/software/amazon/awssdk/services/sns/model/MessageAttributeValue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4560">
+              <caret line="234" column="19" selection-start-line="234" selection-start-column="19" selection-end-line="234" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/App.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/AndroidRegister.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/ErrorResponse.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/ResponseException.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/data/Certificate.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/data/JWS.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/safetynet/Attestation.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/test/kotlin/me/stojan/pasbox/apidevices/androidregister/safetynet/SafetyNetVerifierTest.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/test/kotlin/me/stojan/pasbox/apidevices/androidregister/safetynet/SafetyNetAttestationTest.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/data/Time.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/data/JSONWebSignature.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/androidkeystore/AuthorizationList.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/androidkeystore/KeystoreKeyDescription.kt" />
+        <option value="$PROJECT_DIR$/androidregister/build/generated/source/kaptKotlin/main/me/stojan/pasbox/apidevices/androidregister/RequestJsonAdapter.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/androidkeystore/ASN1AndroidKeyDescription.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/test/kotlin/me/stojan/pasbox/apidevices/androidregister/androidkeystore/AndroidKeystoreAttestationTest.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/data/Base64.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/safetynet/SafetyNetAttestation.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/androidkeystore/AndroidKeystoreAttestation.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/androidkeystore/AndroidKeyDescription.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/RequestResponse.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/hashcash/HashcashVerifier.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/hashcash/Hashcash.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/data/CertificateAdapter.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/me/stojan/pasbox/apidevices/common/androidkeystore/AndroidKeystoreAttestation.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/me/stojan/pasbox/apidevices/common/safetynet/SafetyNetAttestation.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/me/stojan/pasbox/apidevices/common/exception/ExceptionWithReasons.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/me/stojan/pasbox/apidevices/common/safetynet/SafetyNetAttestationException.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/me/stojan/pasbox/apidevices/common/androidkeystore/AndroidKeystoreAttestationException.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/AndroidRegister.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/data/JSONWebSignature.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/RequestResponse.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/dynamodb/Attributes.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/data/Hex.kt" />
+        <option value="$PROJECT_DIR$/common/build.gradle" />
+        <option value="$PROJECT_DIR$/androidregister/build.gradle" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/DeviceRegistrationMessage.kt" />
+        <option value="$PROJECT_DIR$/androidregister/__init__.py" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/dynamodb/Attributes.kt" />
+        <option value="$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/AndroidRegister.kt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="518" />
+    <option name="y" value="99" />
+    <option name="width" value="1632" />
+    <option name="height" value="1300" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apidevices" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apidevices" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="androidregister" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apidevices" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="androidregister" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apidevices" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="androidregister" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="distributions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apidevices" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="androidregister" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apidevices" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="androidregister" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apidevices" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="androidregister" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apidevices" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="androidregister" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="androidregister" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apidevices" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="androidregister" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="androidregister" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamodb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apidevices" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="androidregister" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="apidevices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="me.stojan.pasbox.apidevices.androidregister.androidkeystore" />
+      <recent name="me.stojan.pasbox.apidevices.androidregister" />
+    </key>
+    <key name="KotlinExtractInterfaceDialog.RECENT_KEYS">
+      <recent name="me.stojan.pasbox.apidevices.androidregister.androidkeystore" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="dev.pasbox.apidevices.androidregister" />
+      <recent name="me.stojan.pasbox.apidevices" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.apidevices [build]">
+    <configuration name="AndroidKeystoreAttestationTest.sampleTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;me.stojan.pasbox.apidevices.androidregister.androidkeystore.AndroidKeystoreAttestationTest.sampleTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":androidregister:cleanTest" />
+            <option value=":androidregister:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SafetyNetAttestationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;me.stojan.pasbox.apidevices.androidregister.safetynet.SafetyNetAttestationTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":androidregister:cleanTest" />
+            <option value=":androidregister:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SafetyNetAttestationTest.sampleTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;me.stojan.pasbox.apidevices.androidregister.safetynet.SafetyNetAttestationTest.sampleTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":androidregister:cleanTest" />
+            <option value=":androidregister:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SafetyNetVerifierTest.sampleTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;me.stojan.pasbox.apidevices.androidregister.safetynet.SafetyNetVerifierTest.sampleTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":androidregister:cleanTest" />
+            <option value=":androidregister:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="apidevices [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.apidevices [build]" />
+        <item itemvalue="Gradle.AndroidKeystoreAttestationTest.sampleTest" />
+        <item itemvalue="Gradle.SafetyNetAttestationTest" />
+        <item itemvalue="Gradle.SafetyNetAttestationTest.sampleTest" />
+        <item itemvalue="Gradle.SafetyNetVerifierTest.sampleTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69f3dc28-fb4e-4155-8d98-62d1829299bb" name="Default Changelist" comment="" />
+      <created>1561398741112</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561398741112</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Implement full SafetyNet verification">
+      <created>1561760866898</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561760866898</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Implement full SafetyNet verification">
+      <created>1561760928646</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561760928646</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implement full SafetyNet verification">
+      <created>1561761300604</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561761300604</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Implement full SafetyNet verification">
+      <created>1561805217875</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1561805217875</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implement full SafetyNet verification">
+      <created>1561805398930</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1561805398930</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implement full SafetyNet verification">
+      <created>1561805897555</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1561805897555</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implement full SafetyNet verification">
+      <created>1561805967134</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1561805967134</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Implement full Android KeyStore verification">
+      <created>1561887303036</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1561887303036</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fully working registration verification">
+      <created>1561893472661</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1561893472661</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add Hashcash20 verification">
+      <created>1561917514627</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1561917514627</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Extract common functionality into 'common'">
+      <created>1561918734335</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1561918734335</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Rename package to dev.pasbox, per pasbox.dev hostname">
+      <created>1561918938916</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1561918938916</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Rename package to dev.pasbox, per pasbox.dev hostname">
+      <created>1561927696962</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1561927696962</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="AndroidKeystoreAttestationTest_sampleTest - 2019.06.30 at 11h 17m 21s.xml">
+      <configuration name="AndroidKeystoreAttestationTest.sampleTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AndroidKeystoreAttestationTest_sampleTest - 2019.06.30 at 11h 21m 13s.xml">
+      <configuration name="AndroidKeystoreAttestationTest.sampleTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AndroidKeystoreAttestationTest_sampleTest - 2019.06.30 at 11h 21m 47s.xml">
+      <configuration name="AndroidKeystoreAttestationTest.sampleTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AndroidKeystoreAttestationTest_sampleTest - 2019.06.30 at 11h 23m 52s.xml">
+      <configuration name="AndroidKeystoreAttestationTest.sampleTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AndroidKeystoreAttestationTest_sampleTest - 2019.06.30 at 11h 26m 48s.xml">
+      <configuration name="AndroidKeystoreAttestationTest.sampleTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AndroidKeystoreAttestationTest_sampleTest - 2019.06.30 at 11h 30m 27s.xml">
+      <configuration name="AndroidKeystoreAttestationTest.sampleTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AndroidKeystoreAttestationTest_sampleTest - 2019.06.30 at 11h 33m 29s.xml">
+      <configuration name="AndroidKeystoreAttestationTest.sampleTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AndroidKeystoreAttestationTest_sampleTest - 2019.06.30 at 13h 20m 04s.xml">
+      <configuration name="AndroidKeystoreAttestationTest.sampleTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AndroidKeystoreAttestationTest_sampleTest - 2019.06.30 at 17h 44m 54s.xml">
+      <configuration name="AndroidKeystoreAttestationTest.sampleTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AndroidKeystoreAttestationTest_sampleTest - 2019.06.30 at 18h 48m 21s.xml">
+      <configuration name="AndroidKeystoreAttestationTest.sampleTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="518" y="99" width="1632" height="1300" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49905124" visible="true" weight="0.20113494" />
+      <window_info id="Structure" order="1" sideWeight="0.5009488" side_tool="true" weight="0.2995619" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32922202" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32922202" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943075" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32922202" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32922202" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32922202" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Gradle" order="4" weight="0.32968238" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Implement full SafetyNet verification" />
+    <MESSAGE value="Implement full Android KeyStore verification" />
+    <MESSAGE value="Fully working registration verification" />
+    <MESSAGE value="Add Hashcash20 verification" />
+    <MESSAGE value="Extract common functionality into 'common'" />
+    <MESSAGE value="Rename package to dev.pasbox, per pasbox.dev hostname" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename package to dev.pasbox, per pasbox.dev hostname" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/common/src/test/kotlin/dev/pasbox/apidevices/common/androidkeystore/AndroidKeystoreAttestationTest.kt</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/common/src/test/kotlin/dev/pasbox/apidevices/common/androidkeystore/AndroidKeystoreAttestationTest.kt</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/androidregister/build/generated/source/kaptKotlin/main/dev/pasbox/apidevices/common/androidkeystore/AndroidKeyDescriptionJsonAdapter.kt</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>key.toJSONMap()</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>key.toMap()</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>key.attestationChallenge</expression-string>
+        <language-id>kotlin</language-id>
+        <custom-info>import me.stojan.pasbox.apidevices.androidregister.androidkeystore.KeystoreKeyDescription</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>key.teeEnforced.rootOfTrust</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>androidAttest.subjectX500Principal.getName()</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>androidAttest.subjectX500Principal</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>androidAttest.subjectX500Principal.getName(&quot;CN&quot;)</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>androidAttest.subjectAlternativeNames</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>androidAttest.issuerAlternativeNames</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.62/89d36afbe3135b649d90161a602459c10f7f564f/bcprov-jdk15on-1.62-sources.jar!/org/bouncycastle/asn1/DEROctetString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.62/89d36afbe3135b649d90161a602459c10f7f564f/bcprov-jdk15on-1.62-sources.jar!/org/bouncycastle/asn1/ASN1OctetString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/build/generated/source/kaptKotlin/main/dev/pasbox/apidevices/androidregister/Response_ResultJsonAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#109#444#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.8.0/b6fe06b040c94e2453022197f74b5776f2867ced/moshi-1.8.0-sources.jar!/com/squareup/moshi/ClassJsonAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.8.0/b6fe06b040c94e2453022197f74b5776f2867ced/moshi-1.8.0-sources.jar!/com/squareup/moshi/Moshi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="45" column="38" lean-forward="true" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.8.0/b6fe06b040c94e2453022197f74b5776f2867ced/moshi-1.8.0-sources.jar!/com/squareup/moshi/StandardJsonAdapters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.8.0/b6fe06b040c94e2453022197f74b5776f2867ced/moshi-1.8.0-sources.jar!/com/squareup/moshi/JsonAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/build/tmp/jar/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/build/classes/kotlin/main/me/stojan/pasbox/apidevices/androidregister/safetynet/SafetyNetAttestation_HeaderJsonAdapter.class" />
+    <entry file="file://$PROJECT_DIR$/androidregister/build/classes/kotlin/main/me/stojan/pasbox/apidevices/androidregister/safetynet/SafetyNetAttestation_PayloadJsonAdapter.class" />
+    <entry file="file://$PROJECT_DIR$/androidregister/build/generated/source/kaptKotlin/main/dev/pasbox/apidevices/androidregister/Response_ErrorJsonAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/src/main/kotlin/me/stojan/pasbox/apidevices/androidregister/androidkeystore/ASN1AndroidKeyDescription.kt" />
+    <entry file="file://$PROJECT_DIR$/common/src/test/kotlin/dev/pasbox/apidevices/common/androidkeystore/AndroidKeystoreAttestationTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#69#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/build/generated/source/kaptKotlin/main/dev/pasbox/apidevices/common/androidkeystore/AndroidKeyDescriptionJsonAdapter.kt" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.62/89d36afbe3135b649d90161a602459c10f7f564f/bcprov-jdk15on-1.62-sources.jar!/org/bouncycastle/asn1/ASN1Sequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="279" column="38" lean-forward="true" selection-start-line="279" selection-start-column="38" selection-end-line="279" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt:///home/stojan/.local/share/JetBrains/Toolbox/apps/IDEA-C-JDK11/ch-0/191.7479.19/jre64!/java.base/java/util/Vector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="206" column="26" selection-start-line="206" selection-start-column="26" selection-end-line="206" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../android/app/src/main/java/me/stojan/pasbox/services/registration/OnlineRegistrationJob.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/data/Base64Adapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/data/TimeAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.40/7af6fd6b9293e80fc7408493a764858a7f66b022/kotlin-stdlib-1.3.40-sources.jar!/kotlin/text/StringsJVM.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="399" column="18" selection-start-line="399" selection-start-column="18" selection-end-line="399" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/hashcash/Hashcash.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#62#185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/data/CertificateAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/androidkeystore/AndroidKeyDescription.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3000">
+          <caret line="143" column="35" selection-start-line="143" selection-start-column="35" selection-end-line="143" selection-end-column="35" />
+          <folding>
+            <element signature="e#69#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/androidkeystore/AndroidKeystoreAttestation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#60#457#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/safetynet/SafetyNetAttestation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/exception/ExceptionWithReasons.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/safetynet/SafetyNetAttestationException.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/androidkeystore/AndroidKeystoreAttestationException.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.2.10/9d22e03b9f0a300edff23ccf219d406d12c3378f/rxjava-2.2.10-sources.jar!/io/reactivex/Single.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="3495" column="27" selection-start-line="3495" selection-start-column="27" selection-end-line="3495" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt:///home/stojan/.local/share/JetBrains/Toolbox/apps/IDEA-C-JDK11/ch-0/191.7479.19/jre64!/java.base/java/security/cert/Certificate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt:///home/stojan/.local/share/JetBrains/Toolbox/apps/IDEA-C-JDK11/ch-0/191.7479.19/jre64!/java.base/java/security/cert/X509Certificate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1416">
+          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt:///home/stojan/.local/share/JetBrains/Toolbox/apps/IDEA-C-JDK11/ch-0/191.7479.19/jre64!/java.base/sun/security/x509/X509CertImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20568">
+          <caret line="915" column="63" selection-start-line="915" selection-start-column="63" selection-end-line="915" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt:///home/stojan/.local/share/JetBrains/Toolbox/apps/IDEA-C-JDK11/ch-0/191.7479.19/jre64!/java.base/sun/security/x509/PKIXExtensions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/data/JSONWebSignature.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.40/682cd7821872d1a3c1e8a3e6bdaabd17f2b71004/kotlin-stdlib-common-1.3.40-sources.jar!/kotlin/collections/Maps.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.40/682cd7821872d1a3c1e8a3e6bdaabd17f2b71004/kotlin-stdlib-common-1.3.40-sources.jar!/kotlin/util/Tuples.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/dynamodb/2.5.29/92b3607c5cf233cf2ebcfa6aed8e7b24484f0bab/dynamodb-2.5.29-sources.jar!/software/amazon/awssdk/services/dynamodb/model/UpdateItemRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2179">
+          <caret line="1376" column="16" selection-start-line="1376" selection-start-column="16" selection-end-line="1376" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/dev/pasbox/apidevices/common/data/Hex.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/sns/2.5.29/3a771b485d6c23886599fd71838c258c9f747145/sns-2.5.29-sources.jar!/software/amazon/awssdk/services/sns/model/SubscribeRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16536">
+          <caret line="738" column="16" selection-start-line="738" selection-start-column="16" selection-end-line="738" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/sns/2.5.29/3a771b485d6c23886599fd71838c258c9f747145/sns-2.5.29-sources.jar!/software/amazon/awssdk/services/sns/SnsAsyncClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90696">
+          <caret line="3862" column="49" selection-start-line="3862" selection-start-column="49" selection-end-line="3862" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/DeviceRegistrationMessage.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
+          <folding>
+            <element signature="e#47#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="50" column="107" selection-start-line="50" selection-start-column="107" selection-end-line="50" selection-end-column="107" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/sns/2.5.29/3a771b485d6c23886599fd71838c258c9f747145/sns-2.5.29-sources.jar!/software/amazon/awssdk/services/sns/model/PublishRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20040">
+          <caret line="889" column="65" selection-start-line="889" selection-start-column="65" selection-end-line="889" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/sns/2.5.29/3a771b485d6c23886599fd71838c258c9f747145/sns-2.5.29-sources.jar!/software/amazon/awssdk/services/sns/model/MessageAttributeValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="234" column="19" selection-start-line="234" selection-start-column="19" selection-end-line="234" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/RequestResponse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/dynamodb/Attributes.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="84" column="2" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/androidregister/src/main/kotlin/dev/pasbox/apidevices/androidregister/AndroidRegister.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Kotlin SDK</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Python|androidregister|apidevices</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,21 @@
+{
+  "name": "api-android-authorizer",
+  "version": "1.0.0",
+  "description": "Android API authorizer.",
+  "main": "index.js",
+  "author": "Stojan Dimitrovski",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist artifact.zip",
+    "build": "ncc build index.ts -s -m --v8-cache",
+    "artifact": "zip -0 artifact.zip -j -r dist"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": ">=8.x.x",
+    "@types/node": "10.x.x",
+    "@zeit/ncc": "^0.18.5",
+    "prettier": "^1.17.1",
+    "typescript": "^3.5.1"
+  }
+}
