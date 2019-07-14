@@ -26,6 +26,7 @@ import java.security.Signature
 import java.security.cert.X509Certificate
 import java.time.Clock
 import java.time.Duration
+import java.time.Instant
 import java.util.*
 import javax.crypto.KeyGenerator
 import javax.crypto.Mac
@@ -82,6 +83,8 @@ class AndroidRegister(
     }
 
   private fun handle(event: APIGatewayProxyRequestEvent, context: Context): Response {
+    val now = clock.instant()
+
     if (event.isBase64Encoded) {
       throw ResponseException(reasons = listOf("body-is-octet-stream"))
     }
@@ -103,6 +106,144 @@ class AndroidRegister(
       )
     }
 
+    validateRequest(request)
+
+    verifyHashcash(request)
+    verifyDeviceSignature(request)
+    verifySafetyNet(request, now)
+    verifyDeviceCertificate(request)
+      .let { keyDescription ->
+
+        val identityKey = KeyGenerator.getInstance("HmacSHA512", "BC")!!
+          .run {
+            generateKey()
+          }
+
+        val identity = Curve25519.getInstance(Curve25519.BEST)!!
+          .run {
+            generateKeyPair()
+              .let {
+                Pair(it.publicKey,
+                  Mac.getInstance("HmacSHA512", "BC")!!
+                    .run {
+                      init(identityKey)
+                      update(calculateAgreement(request.identityAgreement, it.privateKey))
+                      doFinal()
+                    })
+              }
+          }
+
+        val platformEndpoint = sns.createPlatformEndpoint(
+          CreatePlatformEndpointRequest.builder()
+            .token(request.token)
+            .platformApplicationArn(Config.SNS_PLATFORM_APPLICATION_ANDROID_ARN)
+            .build()
+        )
+          .get()
+
+        val subscription = sns.subscribe(
+          SubscribeRequest.builder()
+            .endpoint(platformEndpoint.endpointArn())
+            .protocol("application")
+            .topicArn(Config.SNS_TOPIC_ANDROID_ARN)
+            .returnSubscriptionArn(true)
+            .build()
+        )
+          .get()
+
+        listOf(
+          sns.publish(
+            PublishRequest.builder()
+              .messageStructure("json")
+              .message(
+                JSON.adapter(DeviceRegistrationMessage::class.java)!!
+                  .toJson(
+                    DeviceRegistrationMessage(
+                      FCM = DeviceRegistrationMessage.MessageForFCM(
+                        identityAgreement = identity.first,
+                        timestamp = now
+                      )
+                    )
+                  )
+              )
+              .targetArn(platformEndpoint.endpointArn())
+              .build()
+          ),
+
+          dynamoDB.updateItem("Devices") {
+            key("key" dynamo "registration/android/${identity.second.toHex()}")
+
+            set {
+              assign(
+                "identity" dynamo identity.second,
+                "safetyNet" dynamo request.safetyNet.original,
+                "deviceCertificate" dynamo request.deviceCertificate,
+                "token" dynamo request.token,
+                "endpointArn" dynamo platformEndpoint.endpointArn(),
+                "subscriptionArn" dynamo subscription.subscriptionArn(),
+                "hashcash20" dynamo request.hashcash20,
+                "updatedAt" dynamo now
+              )
+
+              ifNotExists("createdAt", "createdAt" dynamo now)
+            }
+
+            returnAllNew()
+          },
+
+          dynamoDB.updateItem("Devices") {
+            key("key" dynamo "token/fcm/${request.token}")
+
+            set {
+              assign(
+                "identity" dynamo identity.second,
+                "safetyNet" dynamo request.safetyNet.original,
+                "deviceCertificate" dynamo request.deviceCertificate,
+                "token" dynamo request.token,
+                "endpointArn" dynamo platformEndpoint.endpointArn(),
+                "subscriptionArn" dynamo subscription.subscriptionArn(),
+                "hashcash20" dynamo request.hashcash20,
+                "updatedAt" dynamo now
+              )
+
+              ifNotExists("createdAt", "createdAt" dynamo now)
+            }
+
+            returnAllNew()
+          })
+          .forEach { future ->
+            future.get()
+          }
+
+        return Response(
+          result = Response.Result(
+            identityKey = identityKey.encoded,
+            certificateDescription = keyDescription
+          )
+        )
+      }
+  }
+
+  internal fun verifyDeviceSignature(request: Request) {
+    val deviceCertificate = request.deviceCertificate.first() as X509Certificate
+
+    if (!Signature.getInstance(deviceCertificate.sigAlgOID, "BC")!!
+        .run {
+          initVerify(deviceCertificate)
+
+          request.deviceCertificate.forEach { update(it.encoded) }
+          update(request.identityAgreement)
+          update(request.safetyNet.original.toByteArray())
+          update(request.token.toByteArray())
+
+          verify(request.signature)
+        }
+    ) {
+      throw ResponseException(reasons = listOf("bad-signature"))
+    }
+  }
+
+  internal fun validateRequest(request: Request) {
     if (request.token.length < 16) {
       throw ResponseException(
         reasons = listOf(
@@ -135,7 +276,9 @@ class AndroidRegister(
         reasons = listOf("bad-pow", "negative-counter")
       )
     }
+  }
 
+  internal fun verifyHashcash(request: Request) {
     if (!Hashcash(2, 0b1111_0000.toByte())
         .apply {
           request.deviceCertificate.forEach { add(it.encoded) }
@@ -148,53 +291,10 @@ class AndroidRegister(
     ) {
       throw ResponseException(reasons = listOf("bad-pow"))
     }
+  }
 
-    val now = clock.instant()
-
-    try {
-      SafetyNetAttestation().verify(request.safetyNet)
-        .let { (_, payload) ->
-          if (!payload.basicIntegrity || !payload.ctsProfileMatch) {
-            throw ResponseException(
-              reasons = listOf(
-                "bad-safetynet",
-                "incompatible-device"
-              )
-            )
-          }
-
-          if ("me.stojan.pasbox" != payload.apkPackageName) {
-            throw ResponseException(
-              reasons = listOf(
-                "bad-safetynet",
-                "unknown-package-name"
-              )
-            )
-          }
-
-          if (String(payload.nonce) != request.token) {
-            throw ResponseException(
-              reasons = listOf(
-                "bad-safetynet",
-                "nonce-not-token"
-              )
-            )
-          }
-
-          if (payload.timestampMs.isBefore(now.minus(Duration.ofMinutes(2)))) {
-            throw ResponseException(
-              reasons = listOf(
-                "bad-safetynet",
-                "stale-attestation"
-              )
-            )
-          }
-        }
-    } catch (e: SafetyNetAttestationException) {
-      throw ResponseException(reasons = e.reasons, cause = e)
-    }
-
-    val keyDescription = try {
+  internal fun verifyDeviceCertificate(request: Request): AndroidKeyDescription {
+    return try {
       AndroidKeystoreAttestation().verify(request.deviceCertificate)
         .also { keyDescription ->
 
@@ -289,127 +389,50 @@ class AndroidRegister(
     } catch (e: AndroidKeystoreAttestationException) {
       throw ResponseException(reasons = e.reasons, cause = e)
     }
+  }
 
-    val deviceCertificate = request.deviceCertificate.first() as X509Certificate
-
-    if (!Signature.getInstance(deviceCertificate.sigAlgOID, "BC")!!
-        .run {
-          initVerify(deviceCertificate)
-
-          request.deviceCertificate.forEach { update(it.encoded) }
-          update(request.identityAgreement)
-          update(request.safetyNet.original.toByteArray())
-          update(request.token.toByteArray())
-
-          verify(request.signature)
-        }
-    ) {
-      throw ResponseException(reasons = listOf("bad-signature"))
-    }
-
-    val identityKey = KeyGenerator.getInstance("HmacSHA512", "BC")!!
-      .run {
-        generateKey()
-      }
-
-    val identity = Curve25519.getInstance(Curve25519.BEST)!!
-      .run {
-        generateKeyPair()
-          .let {
-            Pair(it.publicKey,
-              Mac.getInstance("HmacSHA512", "BC")!!
-                .run {
-                  init(identityKey)
-                  update(calculateAgreement(request.identityAgreement, it.privateKey))
-                  doFinal()
-                })
-          }
-      }
-
-    val platformEndpoint = sns.createPlatformEndpoint(
-      CreatePlatformEndpointRequest.builder()
-        .token(request.token)
-        .platformApplicationArn(System.getenv("SNS_PLATFORM_APPLICATION_ANDROID_ARN"))
-        .build()
-    )
-      .get()
-
-    val subscription = sns.subscribe(
-      SubscribeRequest.builder()
-        .endpoint(platformEndpoint.endpointArn())
-        .protocol("application")
-        .topicArn(System.getenv("SNS_TOPIC_ANDROID_ARN"))
-        .returnSubscriptionArn(true)
-        .build()
-    )
-      .get()
-
-    listOf(
-      sns.publish(
-        PublishRequest.builder()
-          .messageStructure("json")
-          .message(
-            JSON.adapter(DeviceRegistrationMessage::class.java)!!
-              .toJson(
-                DeviceRegistrationMessage(
-                  FCM = DeviceRegistrationMessage.MessageForFCM(
-                    identityAgreement = identity.first,
-                    timestamp = now
-                  )
-                )
+  internal fun verifySafetyNet(request: Request, now: Instant) {
+    try {
+      SafetyNetAttestation().verify(request.safetyNet)
+        .let { (_, payload) ->
+          if (!payload.basicIntegrity || !payload.ctsProfileMatch) {
+            throw ResponseException(
+              reasons = listOf(
+                "bad-safetynet",
+                "incompatible-device"
               )
-          )
-          .targetArn(platformEndpoint.endpointArn())
-          .build()
-      ),
+            )
+          }
 
-      dynamoDB.updateItem("Devices") {
-        key("key" dynamo "registration/android/${identity.second.toHex()}")
+          if ("me.stojan.pasbox" != payload.apkPackageName) {
+            throw ResponseException(
+              reasons = listOf(
+                "bad-safetynet",
+                "unknown-package-name"
+              )
+            )
+          }
 
-        set {
-          assign(
-            "identity" dynamo identity.second,
-            "identityKey" dynamo identityKey.encoded,
-            "safetyNet" dynamo request.safetyNet.original,
-            "deviceCertificate" dynamo request.deviceCertificate,
-            "token" dynamo request.token,
-            "endpointArn" dynamo platformEndpoint.endpointArn(),
-            "subscriptionArn" dynamo subscription.subscriptionArn(),
-            "hashcash20" dynamo request.hashcash20,
-            "createdAt" dynamo now,
-            "updatedAt" dynamo now
-          )
+          if (String(payload.nonce) != request.token) {
+            throw ResponseException(
+              reasons = listOf(
+                "bad-safetynet",
+                "nonce-not-token"
+              )
+            )
+          }
+
+          if (payload.timestampMs.isBefore(now.minus(Duration.ofMinutes(2)))) {
+            throw ResponseException(
+              reasons = listOf(
+                "bad-safetynet",
+                "stale-attestation"
+              )
+            )
+          }
         }
-      },
-
-      dynamoDB.updateItem("Devices") {
-        key("key" dynamo "token/fcm/${request.token}")
-
-        set {
-          assign(
-            "identity" dynamo identity.second,
-            "identityKey" dynamo identityKey.encoded,
-            "safetyNet" dynamo request.safetyNet.original,
-            "deviceCertificate" dynamo request.deviceCertificate,
-            "token" dynamo request.token,
-            "endpointArn" dynamo platformEndpoint.endpointArn(),
-            "subscriptionArn" dynamo subscription.subscriptionArn(),
-            "hashcash20" dynamo request.hashcash20,
-            "updatedAt" dynamo now
-          )
-
-          ifNotExists("createdAt", "createdAt" dynamo now)
-        }
-      })
-      .forEach { future ->
-        future.get()
-      }
-
-    return Response(
-      result = Response.Result(
-        identityKey = identityKey.encoded,
-        certificateDescription = keyDescription
-      )
-    )
+    } catch (e: SafetyNetAttestationException) {
+      throw ResponseException(reasons = e.reasons, cause = e)
+    }
   }
 }
