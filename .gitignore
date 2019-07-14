@@ -6,3 +6,6 @@ build
 out
 *.log
 .gradle
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/find.xml
